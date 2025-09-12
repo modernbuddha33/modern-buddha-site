@@ -1,26 +1,68 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Press+Start+2P:wght@400&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    font-family: 'Silkscreen', 'Courier New', monospace;
+  }
+  
+  body {
+    @apply bg-white text-black dark:bg-dark dark:text-white transition-colors duration-200 font-silkscreen;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'%3E%3Crect width='1' height='1'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .dark body {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Crect width='1' height='1'/%3E%3C/g%3E%3C/svg%3E");
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Ensure fonts are loaded */
+  .font-outfit {
+    font-family: 'Outfit', 'Inter', sans-serif !important;
+  }
+  
+  .font-silkscreen {
+    font-family: 'Silkscreen', 'Courier New', monospace !important;
+  }
+  
+  .font-pressStart2p {
+    font-family: 'Press Start 2P', 'Courier New', monospace !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .pixel-button {
+    @apply font-silkscreen border-2 border-black dark:border-white shadow-pixel dark:shadow-pixel-dark 
+           transition-all duration-100 ease-in-out cursor-pointer select-none;
+  }
+  
+  .pixel-button:hover {
+    @apply shadow-pixel-pressed dark:shadow-pixel-pressed-dark transform translate-x-[1px] translate-y-[1px];
+  }
+  
+  .pixel-button:active {
+    @apply shadow-pixel-pressed dark:shadow-pixel-pressed-dark transform translate-x-[1px] translate-y-[1px];
+  }
+  
+  .pixel-button-primary {
+    @apply pixel-button bg-honey text-black;
+  }
+  
+  .pixel-button-secondary {
+    @apply pixel-button bg-white dark:bg-dark text-black dark:text-white;
+  }
+  
+  .pixel-text {
+    @apply font-silkscreen;
+  }
+  
+  .pixel-heading {
+    @apply font-outfit font-semibold tracking-tight;
+  }
+  
+  .logo-text {
+    @apply font-outfit font-semibold text-sm;
+  }
 }

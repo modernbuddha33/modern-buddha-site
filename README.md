@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Modern Buddha
 
-## Getting Started
+A modern, pixel art-inspired website for spiritual coaching and mindfulness. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🎨 Design Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Pixel Art Aesthetic**: Retro 80s-90s video game style with pixelated fonts and borders
+- **Dark Mode**: Full light/dark mode toggle with proper color transitions
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Zen Minimalism**: Clean, calm design with honey accent color (#F0C674)
+- **Typography**: Google Silkscreen for headings, Inter for body text
+
+## 🚀 Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+2. **Add your logo**:
+   - Save your logo image as `logo-original.png` in the project root
+   - Run the logo generation script:
+   ```bash
+   pnpm generate-logos
+   ```
+   This will create all necessary logo variants (different sizes, white version for dark mode, favicons, etc.)
+
+3. **Start development server**:
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📱 Mobile Responsiveness
+
+The site is fully responsive with:
+- Mobile-first design approach
+- Collapsible mobile navigation menu
+- Responsive typography and spacing
+- Touch-friendly buttons and interactions
+- Optimized logo sizing for different screen sizes
+
+## 🎯 Logo Requirements
+
+Your logo should be:
+- **Format**: PNG with transparent background
+- **Size**: At least 128x128 pixels (larger is better)
+- **Style**: Pixel art that matches the site's aesthetic
+- **Colors**: Dark version for light mode, will be automatically inverted for dark mode
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout with SEO and theme provider
+│   ├── page.tsx           # Homepage
+│   ├── coaching/          # Coaching page
+│   ├── about/             # About page
+│   ├── blog/              # Blog page
+│   ├── resources/         # Resources page
+│   ├── testimonials/      # Testimonials page
+│   └── contact/           # Contact page
+├── components/            # Reusable components
+│   ├── LogoPixel.tsx      # Logo component with responsive sizing
+│   ├── Navbar.tsx         # Navigation with mobile menu
+│   ├── Footer.tsx         # Footer with links
+│   ├── ThemeProvider.tsx  # Dark mode provider
+│   └── ThemeToggle.tsx    # Theme toggle button
+└── globals.css           # Global styles and Tailwind imports
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Built With
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety and better developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **next-themes** - Dark mode support
+- **next-seo** - SEO optimization
+- **Sharp** - Image processing for logo variants
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 License
 
-## Learn More
+This project is private and proprietary.
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is a private project for The Modern Buddha brand.
