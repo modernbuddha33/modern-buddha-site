@@ -102,7 +102,7 @@ export default function StyleGuidePage() {
             <div className="space-y-4">
               <div>
                 <h1 className="pixel-heading text-4xl sm:text-5xl md:text-6xl">Heading 1 (6xl)</h1>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Main page headlines - "Wake up to what's already here"</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Main page headlines - &quot;Wake up to what&apos;s already here&quot;</p>
               </div>
               <div>
                 <h2 className="pixel-heading text-3xl sm:text-4xl md:text-5xl">Heading 2 (5xl)</h2>
