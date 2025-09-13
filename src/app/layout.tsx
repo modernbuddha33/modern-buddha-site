@@ -14,6 +14,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://modernbuddha.org'),
   title: 'The Modern Buddha - Modern Spirituality Without the Fluff',
   description: 'Wake up to what\'s already here. Modern spirituality without the fluff. Turn your mess into your message and live from the first-person experience of consciousness.',
   keywords: ['spirituality', 'mindfulness', 'consciousness', 'coaching', 'meditation', 'zen', 'buddhism'],
